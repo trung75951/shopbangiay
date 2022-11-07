@@ -51,7 +51,7 @@ spl_autoload_register();
     ?>
 
     <?php
-      include "VIew/banner.php";
+      include "View/banner.php";
     ?>
 
     <div class="container-fluid">
@@ -71,7 +71,7 @@ spl_autoload_register();
     ?>
   </div>
   <!-- <script src="https://cdn.tiny.cloud/1/5to837jgaayhbjkam58rzcyye5p6nut0nzdktthsp7bpuj5q/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
-  <script src="./VIew/ajax/tinymce.js"></script>
+  <script src="./View/ajax/tinymce.js"></script>
   <!-- <script type="text/javascript">
     var filterValue = document.querySelectorAll('input[name="filter"]');
 
