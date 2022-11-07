@@ -1,3 +1,16 @@
+<?php
+session_start();
+ob_start();
+include 'Model/cart.php';
+// include 'Model/uploadhinh.php';
+// $mail = new Mailler();
+// include "mail/sendmail.php";
+set_include_path(get_include_path() . PATH_SEPARATOR . 'Model/');
+spl_autoload_extensions('.php');
+
+spl_autoload_register();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +19,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Demo WebBanGiay</title>
+  <script src="./Content/js/jquery.min.js"></script>
   <!-- <link rel="stylesheet" href="./Content/fontawesome-free-5.15.3-web/css/all.min.css"> -->
   <link rel="stylesheet" href="./Content/css/pro.min.css">
   <link rel="stylesheet" href="./Content/css/bootstrap/dist/css/bootstrap.css">
-  
+  <script src="./Content/js/popper.min.js"></script>
+  <script src="./Content/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="./Content/css/style.css">
+  <script src="./Content/js/script.js"></script>
 
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.0/css/pro.min.css" />
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,6 +36,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
   <!-- <link rel="stylesheet" href="Content/css//style.css"> -->
+  <script src="./node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="./Content/css/fontawesome.js"></script>
 
 </head>
 
@@ -29,11 +47,30 @@
   <h1>Xin chòa</h1>
   <div id="maintest-nav-oragne">
     <?php
-        include "View/dautrang.php";
+    include "View/dautrang.php";
     ?>
 
-  </div>
+    <?php
+    include "View/banner.php";
+    ?>
 
+    <div class="container-fluid">
+      <div class="row">
+        <?php
+        $ctrl = "home";
+        if (isset($_GET['action'])) {
+          $ctrl = $_GET['action'];
+        }
+        include 'Controller/' . $ctrl . '.php';
+        ?>
+
+      </div>
+    </div>
+    <?php
+    include "View/footer.php";
+    ?>
+  </div>
+  <!-- <script src="https://cdn.tiny.cloud/1/5to837jgaayhbjkam58rzcyye5p6nut0nzdktthsp7bpuj5q/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
   <script>
     $(document).ready(function() {
       tinymce.init({
@@ -69,13 +106,56 @@
 
     })
   </script>
-  <script src="./Content/js/jquery.min.js"></script>
-  <script src="./Content/js/popper.min.js"></script>
-  <script src="./Content/js/bootstrap.min.js"></script>
-  <script src="./Content/js/script.js"></script>
-  <script src="./node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
-  <script src="./Content/css/fontawesome.js"></script>
+  <!-- <script type="text/javascript">
+    var filterValue = document.querySelectorAll('input[name="filter"]');
 
+    function filterTypes() {
+
+    }
+    $(document).ready(function() {
+      $('#locsanpham').on('click', function() {
+        var tmpArray = [];
+        // filterValue.forEach((item) => {
+        //   if (item.checked) {
+        //     tmpArray.push(item.value);
+        //     console.log('1');
+        //   }
+        // })
+        for (let i = 0;  i< filterValue.length; i++) {
+          if(filterValue[i].checked){
+            tmpArray.push(filterValue[i].value);
+            console.log(i);
+          }
+        }
+        document.querySelector('input[name="tmpArray"]').value = tmpArray;
+        var form = document.querySelector('#categoryForm');
+        var data = new FormData(form)
+        $.ajax({
+          url: 'index.php?action=home&act=tmp',
+          type: "POST",
+          crossDomain: true,
+          data: data,
+          processData: false,
+          contentType: false,
+          cache: false,
+          async: false,
+
+          success: function(data) {
+            $('#data').html(data);
+          }
+
+        })
+
+
+      })
+
+    })
+  </script> -->
+  <!-- <script>
+    $(window).on('load',function(){
+      $('#banner').modal('show');
+    })
+  </script> -->
 </body>
 
 
