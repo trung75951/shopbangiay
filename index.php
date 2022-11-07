@@ -29,7 +29,7 @@
   <h1>Xin chòa</h1>
   <div id="maintest-nav-oragne">
     <?php
-        include "View/dautrang.php";
+        echo "HELLOWL;ASDFJ";
     ?>
 
   </div>
