@@ -1,0 +1,428 @@
+/* BTW alt-shift will pop a color picker 
+  example color: followed  by alt shift will pop it
+*/
+/*
+Hide the label if placeholder is supported
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+#registration-form {
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 400px;
+  min-width: 250px;
+  margin: 20px auto;
+  position: relative;
+}
+
+#registration-form .fieldset {
+  background-color: #d5d5d5;
+
+  border-radius: 3px;
+
+}
+
+#registration-form legend {
+  text-align: center;
+  background: #364351;
+  width: 100%;
+  padding: 30px 0;
+  border-radius: 3px 3px 0 0;
+  color: white;
+  font-size: 2em;
+}
+
+.fieldset form {
+  border: 1px solid #2f2f2f;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 3px 3px;
+}
+
+.placeholder #registration-form label {
+  display: none;
+}
+
+.no-placeholder #registration-form label {
+  margin-left: 5px;
+  position: relative;
+  display: block;
+  color: grey;
+  text-shadow: 0 1px white;
+  font-weight: bold;
+}
+
+/* all */
+::-webkit-input-placeholder {
+  text-shadow: 1px 1px 1px white;
+  font-weight: bold;
+}
+
+::-moz-placeholder {
+  text-shadow: 0 1px 1px white;
+  font-weight: bold;
+}
+
+/* firefox 19+ */
+:-ms-input-placeholder {
+  text-shadow: 0 1px 1px white;
+  font-weight: bold;
+}
+
+/* ie */
+#registration-form input[type=text] {
+  padding: 15px 20px;
+  border-radius: 1px;
+  margin: 5px auto;
+  background-color: #f7f7f7;
+  border: 1px solid silver;
+
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, .8);
+  width: 100%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color .5s ease;
+  -moz-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
+  -ms-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.no-placeholder #registration-form input[type=text] {
+  padding: 10px 20px;
+}
+
+#registration-form input[type=text]:active,
+.placeholder #registration-form input[type=text]:focus {
+  outline: none;
+  border-color: silver;
+  background-color: white;
+}
+
+#registration-form input[type=submit] {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #5C8CA7;
+  padding: 10px;
+  color: white;
+  border: 1px solid #3498db;
+  border-radius: 3px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+}
+
+#registration-form input[type=submit]:hover {
+  background-color: #2980b9;
+}
+
+#registration-form input[type=submit]:active {
+  background: #5C8CA7;
+}
+
+
+.parsley-error-list {
+  background-color: #C34343;
+  padding: 5px 11px;
+  margin: 0;
+  list-style: none;
+  border-radius: 0 0 3px 3px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  color: white;
+  border: 1px solid #870d0d;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  top: -1px;
+  text-shadow: 0px 1px 1px #460909;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.parsley-error {
+  border-color: #870d0d !important;
+  border-bottom: none;
+}
+
+#registration-form select {
+  width: 100%;
+  padding: 5px;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+#khungthanhtoan {
+  position: fixed;
+  width: 70%;
+  top: 10%;
+  z-index: 20;
+  background: white;
+  left: 15%;
+  box-shadow: 0px 0px 30px 10px black;
+  display: none;
+}
+
+#tenhanghoa {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.evo-blog-header .evo-blog-header-content {
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px 40px;
+  flex-flow: column;
+  text-align: center;
+  padding: 0 0 0 120px;
+}
+
+.evo-blog-header .evo-blog-header-content .evo-blog-des {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+#hovermota:link {
+  color: black;
+
+}
+
+#hovermota:visited {
+  color: black;
+
+}
+
+#hovermota:hover {
+  color: #D1A856;
+}
+
+#hovermota:active {
+  color: red;
+}
+
+#hoverhinh:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.lbl-shopping-cart-gio-hang.lbl-shopping-cart {
+  font-size: 26px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: #1c1c1c;
+}
+
+.lbl-shopping-cart-gio-hang.lbl-shopping-cart span {
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.cart-empty .btn-cart-empty a {
+  color: #fff;
+  background: #1c1c1c;
+  border-color: #1c1c1c;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 30px;
+  line-height: 1.1;
+  height: auto;
+}
+
+.cart-empty img {
+  max-width: 200px;
+}
+
+.btn-cart-empty a {
+  background-color: black;
+  color: wheat;
+  margin: 10px 0 0 25px;
+}
+
+
+.title-blog {
+  font-size: 26px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  /* font-family: 'SVN-Gotham'; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.mobile-viewmore {
+  /* position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
+  background-color: #1c1c1c;
+}
+
+.box_center {
+  display: flex;
+  justify-content: center;
+}
+
+.button_page {
+  background-color: #916841;
+  border-color: #916841;
+  color: #fff;
+}
+
+.nav_text {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.nav_text .text {
+  font-weight: 500;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  display: block;
+}
+
+.evo-header-mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.evo-flexitem-fill {
+  box-sizing: border-box;
+}
+
+.img-responsive {
+  margin-top: 10px;
+  height: 150px;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+  height: 150px;
+  align-items: center;
+}
+
+.justify-end li {
+  position: relative;
+  list-style: none;
+}
+
+.text a {
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.site-nav-account a {
+  font-weight: 500;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+.blank{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+.site-nav-account ul {
+  position: absolute;
+  display: none;
+  top: 30px;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  width: 100%;
+  min-width: 200px;
+  border: 1px solid #efefef;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 6px 12px 0 rgb(0 0 0 / 18%);
+}
+
+.site-nav-account ul li a {
+  display: block;
+  padding: 7px 10px;
+  color: #1c1c1c;
+  text-transform: uppercase;
+}
+
+.mini-cart a{
+  text-decoration: none;
+}
+
+.site-nav-account a {
+
+  text-decoration: none;
+}
+
+.site-nav-account:hover ul , .blank:hover .site-nav-account ul{
+  display: block;
+  
+}
+
+.site-nav-item a {
+  font-weight: 500;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+.modal-body img {
+  width: 100%;
+}
